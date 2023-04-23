@@ -15,3 +15,7 @@ style = [
     ["text", ""],
     ["disabled", "fg:#858585 italic"]
 ]
+
+changelog_file = "CHANGELOG.md"
+update_changelog_on_bump = true
+changelog_incremental = true
