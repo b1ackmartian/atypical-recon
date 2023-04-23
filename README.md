@@ -4,11 +4,13 @@ loosely based off what's happening at [this article](https://dhiyaneshgeek.githu
 
 ## setup
 
-Set environment variables in current shell or add them as configuration in `.env`
+Set configuration in `.config.yaml`:
 
-```sh
-export MY_RECON_DB=.example.db
-export MY_RECON_DOMAINS=example.gov,example.org
+```yaml
+MY_RECON_DB: .project.db
+MY_RECON_DOMAINS:
+  - example.gov
+  - example.org
 ```
 
 ## run

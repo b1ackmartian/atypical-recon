@@ -15,7 +15,9 @@ func Get() *viper.Viper {
 	}
 	c = viper.New()
 
-	c.SetConfigFile(".env")
+	c.AddConfigPath(".")
+	c.SetConfigType("yaml")
+	c.SetConfigFile(".config.yaml")
 	c.ReadInConfig()
 	c.AutomaticEnv()
 	return c
