@@ -12,9 +12,8 @@ import (
 )
 
 func main() {
-	cfg := config.Get()
-	dbFile := cfg.GetString(config.DB_FILE)
-	domainConfig := cfg.GetStringSlice(config.DOMAIN_CONFIG)
+	dbFile := config.Get().GetString(config.DB_FILE)
+	domainConfig := config.Get().GetStringSlice(config.DOMAIN_CONFIG)
 
 	db, err := sql.Open("sqlite3", dbFile)
 	if err != nil {
