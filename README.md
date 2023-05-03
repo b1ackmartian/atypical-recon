@@ -1,6 +1,8 @@
-# my_recon_go
+# atypical-recon
 
-`my_recon_go` is a Golang tool for subdomain enumeration and HTTP probing, loosely based on the workflow described in [this article](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/). The tool uses SubFinder for subdomain enumeration and HTTPX for HTTP probing. It stores the discovered subdomains and active hosts in a SQLite database.
+`atypical-recon` is a Golang tool for subdomain enumeration and HTTP probing, loosely based on the workflow described in [this article](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/). The tool uses SubFinder for subdomain enumeration and HTTPX for HTTP probing. It stores the discovered subdomains and active hosts in a SQLite database.
+
+This is a work-in-progress as I learn more about bug bounty recon and web application security.
 
 ## Database Schema
 

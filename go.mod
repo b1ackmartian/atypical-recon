@@ -1,4 +1,4 @@
-module github.com/atypicaltech/my_recon_go
+module github.com/atypicaltech/atypical-recon
 
 go 1.20
 

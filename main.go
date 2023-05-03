@@ -6,8 +6,8 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 	"go.uber.org/zap"
 
-	"github.com/atypicaltech/my_recon_go/config"
-	"github.com/atypicaltech/my_recon_go/recon"
+	"github.com/atypicaltech/atypical-recon/config"
+	"github.com/atypicaltech/atypical-recon/recon"
 )
 
 func main() {
