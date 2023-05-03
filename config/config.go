@@ -1,24 +1,26 @@
 package config
 
-import "github.com/spf13/viper"
-
-const (
-	DB_FILE       = "MY_RECON_DB"
-	DOMAIN_CONFIG = "MY_RECON_DOMAINS"
+import (
+	"github.com/pkg/errors"
+	"github.com/spf13/viper"
 )
 
-var c *viper.Viper
+const (
+	DbFile       = "MY_RECON_DB"
+	DomainConfig = "MY_RECON_DOMAINS"
+)
 
-func Get() *viper.Viper {
-	if c != nil {
-		return c
+func New() (*viper.Viper, error) {
+	v := viper.New()
+
+	v.AddConfigPath(".")
+	v.SetConfigType("yaml")
+	v.SetConfigFile(".config.yaml")
+
+	if err := v.ReadInConfig(); err != nil {
+		return nil, errors.Wrap(err, "reading config")
 	}
-	c = viper.New()
 
-	c.AddConfigPath(".")
-	c.SetConfigType("yaml")
-	c.SetConfigFile(".config.yaml")
-	c.ReadInConfig()
-	c.AutomaticEnv()
-	return c
+	v.AutomaticEnv()
+	return v, nil
 }
